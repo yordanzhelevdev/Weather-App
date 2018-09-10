@@ -11,26 +11,24 @@
     #1781c6
   );
 }
-
 .search-wrapper {
-    display: inline-flex;
-    flex: 1 1 600px;
-    position: relative;
-    overflow: hidden;
-}
-
-.search-icon { 
-    padding: 10px;
-}
-
-.search-input {
-    padding: 10px;
-  /* padding: 12px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1 1 300px;
+  border: 1px solid #ccc;
+  overflow: hidden;
   width: 100%;
-  border: none;
-  text-indent: 30px; */
+  max-width: 700px;
 }
-
+.search-icon {
+  padding: 10px;
+  background: white;
+}
+.search-input {
+  border: 0;
+  padding: 10px 10px 10px 0;
+  flex: 1;
+}
 .search-input::placeholder {
   text-transform: uppercase;
 }
