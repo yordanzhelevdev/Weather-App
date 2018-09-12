@@ -23,6 +23,7 @@
 .search-icon {
   padding: 10px;
   background-color: white;
+  color: black;
 }
 .search-input {
   padding: 10px 10px 10px 0;
@@ -36,7 +37,6 @@
 
 .city-name {
   font-size: 5rem;
-  color: white;
   text-align: center;
   margin: 10px 0 10px 0;
   grid-row: 2;
@@ -51,4 +51,23 @@
 .more-info {
   grid-row: 4;
   grid-column: 3;
+}
+
+/* Time and Weather */
+.time-and-weather {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  font-size: 5rem;
+  margin-right: 35px;
+}
+
+.more-info {
+  display: flex;
+}
+
+.temperature span,.humidity span,.wind span {
+  font-size: 3.5rem;
 }
