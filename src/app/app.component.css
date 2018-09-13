@@ -94,21 +94,27 @@
 
 .weekly-weather {
   grid-row: 5;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: center;
+  grid-gap: 20px;
 }
 
 .day {
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
 }
 
 .day > div {
-  padding: 20px;
   text-align: center;
 }
 
 
 .day-weather {
   padding: 70px 45px;
+  font-size: 2.4rem;
 }
 
 .day-weather img {
@@ -117,4 +123,5 @@
 
 .day-name {
   padding: 5px;
+  border-top: 1px solid white;
 }
