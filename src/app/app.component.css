@@ -57,6 +57,7 @@
 .time-and-weather {
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 
 .time {
@@ -66,8 +67,54 @@
 
 .more-info {
   display: flex;
+  align-items: center;
 }
 
-.temperature span,.humidity span,.wind span {
-  font-size: 3.5rem;
+.temperature span,
+.humidity span,
+.wind span {
+  font-size: 3rem;
+}
+
+.temperature,
+.humidity,
+.wind {
+  display: flex;
+  align-items: center;
+}
+
+.temperature,
+.humidity {
+  margin-right: 20px;
+}
+
+.more-info div img {
+  margin-right: 10px;
+}
+
+.weekly-weather {
+  grid-row: 5;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+}
+
+.day > div {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.day-weather {
+  padding: 70px 45px;
+}
+
+.day-weather img {
+  max-width: 135px;
+}
+
+.day-name {
+  padding: 5px;
 }
