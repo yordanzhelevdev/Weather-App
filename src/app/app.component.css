@@ -1,12 +1,11 @@
 .wrapper {
   width: 100%;
-  height: 100vh;
-  padding: 100px;
-  background-image: linear-gradient(to bottom, #28b7d5, #082256);
+  padding: 60px;
   display: grid;
   grid-template-columns: 1fr auto auto 1fr;
   grid-template-rows: repeat(5, auto);
   align-content: start;
+  grid-row-gap: 25px;
 }
 .search-wrapper {
   display: flex;
@@ -38,36 +37,30 @@
 .city-name {
   font-size: 5rem;
   text-align: center;
-  margin: 10px 0 10px 0;
+  margin: 0;
   grid-row: 2;
   grid-column: 2 / span 2;
-}
-
-.time-and-weather {
-  grid-row: 3;
-  grid-column: 3;
 }
 
 .more-info {
   grid-row: 4;
   grid-column: 3;
+  display: flex;
+  align-items: center;
 }
 
 /* Time and Weather */
 .time-and-weather {
+  grid-row: 3;
+  grid-column: 3;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .time {
   font-size: 5rem;
   margin-right: 35px;
-}
-
-.more-info {
-  display: flex;
-  align-items: center;
 }
 
 .temperature span,
@@ -111,9 +104,8 @@
   text-align: center;
 }
 
-
 .day-weather {
-  padding: 70px 45px;
+  padding: 70px 60px;
   font-size: 2.4rem;
 }
 
@@ -122,6 +114,7 @@
 }
 
 .day-name {
-  padding: 5px;
+  padding: 10px;
   border-top: 1px solid white;
+  font-size: 2rem;
 }

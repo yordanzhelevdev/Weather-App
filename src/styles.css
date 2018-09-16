@@ -16,5 +16,7 @@ body {
   margin: 0;
   font-size: 16px;
   color: white;
-  font-family: 'FrankRuhlHofshi', Times, serif
+  font-family: 'FrankRuhlHofshi', Times, serif;
+  background-image: linear-gradient(to bottom, #28b7d5, #082256);
+  height: 100vh;
 }

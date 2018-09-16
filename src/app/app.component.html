@@ -3,7 +3,7 @@
     <i class="fal fa-search search-icon"></i>
     <input type="search" placeholder="Search city" class="search-input" />
   </div>
-  <h1 class="city-name">Stara Zagora, Bulgaria</h1>
+  <h1 class="city-name">{{cityName}}, {{country}}</h1>
   <div class="time-and-weather">
     <span class="time">21:00</span>
     <img src="../assets/Images/rainy.png" alt="Weather icon" />
@@ -11,21 +11,21 @@
   <div class="more-info">
     <div class="temperature">
       <img src="../assets/Images/maxtemp.png" alt="Temperature icon" />
-      <span>18°</span>
+      <span>{{currentTemp}}°</span>
     </div>
     <div class="humidity">
       <img src="../assets/Images/humity.png" alt="Humidity icon" />
-      <span>38%</span>
+      <span>{{currentHumidity}}%</span>
     </div>
     <div class="wind">
       <img src="../assets/Images/windspeed.png" alt="Wind speed icon" />
-      <span>3m/s</span>
+      <span>{{currentWindSpeed}}m/s</span>
     </div>
   </div>
   <div class="weekly-weather">
     <div class="day">
       <div class="day-weather">
-        <img src="../assets/Images/rainy.png"/>
+        <img src="../assets/Images/rainy.png" />
         <div>16°/28°</div>
       </div>
       <div class="day-name">
