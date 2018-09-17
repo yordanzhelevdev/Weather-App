@@ -14,7 +14,6 @@ export class AppComponent {
   currentTemp: number;
   currentHumidity: number;
   currentWindSpeed: number;
-  country: string;
   erroMessage: string;
 
   constructor(
@@ -30,11 +29,11 @@ export class AppComponent {
       this.weatherService
         .getTheWeather(this.latitude, this.longitude)
         .subscribe(weatherData => {
-          this.cityName = weatherData["city"]["name"];
-          this.country = weatherData["city"]["country"];
-          this.currentTemp = weatherData.list[0]["main"]["temp"];
-          this.currentHumidity = weatherData.list[0]["main"]["humidity"];
-          this.currentWindSpeed = weatherData.list[0]["wind"]["speed"];
+          console.log(weatherData);
+          this.cityName = weatherData["timezone"];
+          this.currentTemp = weatherData["currently"]["temperature"];
+          this.currentWindSpeed = weatherData["currently"]["windSpeed"];
+          this.currentHumidity = weatherData['currently']['humidity'];
           console.log(this.currentTemp);
           console.log(this.cityName);
         });

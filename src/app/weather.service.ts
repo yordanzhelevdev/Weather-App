@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -12,11 +12,15 @@ export class WeatherService {
     const params = {
       lat: lat,
       lon: long,
-      APPID: "06367deba23da7ef9b2d282dbdf9b964",
-      units: "metric"
+      APPID: "2ba88d6177e529c3dcb88d0666e36796"
     };
-    return this.http.get("http://api.openweathermap.org/data/2.5/forecast", {
-      params: params
-    });
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': '*'
+      })  
+    };
+
+    return this.http.get(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${params.APPID}/${params.lat},${params.lon}?units=si`, httpOptions);
   }
 }
