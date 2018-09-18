@@ -12,6 +12,6 @@ export class DaysComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-   
+   console.log(this.weekly);
   }
 }

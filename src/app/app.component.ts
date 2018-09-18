@@ -36,9 +36,7 @@ export class AppComponent {
           this.currentTemp = weatherData["currently"]["temperature"];
           this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
           this.currentHumidity = weatherData['currently']['humidity'] * 100;
-          this.weekly = this.weatherService['daily']['data'];
-          console.log(this.currentTemp);
-          console.log(this.cityName);
+          this.weekly = weatherData['daily']['data'];
         });
     });
   }
