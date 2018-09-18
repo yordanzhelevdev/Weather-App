@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { GeolocationService } from "./geolocation.service";
 import { WeatherService } from "./weather.service";
 import { kmphToMs } from '../utilities/helpful';
+import { DaysComponent } from './days/days.component';
 
 @Component({
   selector: "app-root",

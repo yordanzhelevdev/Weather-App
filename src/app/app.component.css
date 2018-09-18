@@ -85,36 +85,11 @@
   margin-right: 10px;
 }
 
-.weekly-weather {
+app-days {
   grid-row: 5;
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(5, auto);
   justify-content: center;
   grid-gap: 20px;
-}
-
-.day {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid white;
-}
-
-.day > div {
-  text-align: center;
-}
-
-.day-weather {
-  padding: 70px 60px;
-  font-size: 2.4rem;
-}
-
-.day-weather img {
-  max-width: 135px;
-}
-
-.day-name {
-  padding: 10px;
-  border-top: 1px solid white;
-  font-size: 2rem;
 }

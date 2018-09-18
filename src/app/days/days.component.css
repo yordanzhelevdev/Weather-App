@@ -1,0 +1,24 @@
+.day {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+}
+
+.day > div {
+  text-align: center;
+}
+
+.day-weather {
+  padding: 70px 60px;
+  font-size: 2.4rem;
+}
+
+.day-weather img {
+  max-width: 135px;
+}
+
+.day-name {
+  padding: 10px;
+  border-top: 1px solid white;
+  font-size: 2rem;
+}
