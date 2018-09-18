@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { GeolocationService } from "./geolocation.service";
 import { WeatherService } from "./weather.service";
+import { kmphToMs } from '../utilities/helpful';
 
 @Component({
   selector: "app-root",
@@ -13,7 +14,7 @@ export class AppComponent {
   cityName: string;
   currentTemp: number;
   currentHumidity: number;
-  currentWindSpeed: number;
+  currentWindSpeed: string;
   erroMessage: string;
 
   constructor(
@@ -32,8 +33,8 @@ export class AppComponent {
           console.log(weatherData);
           this.cityName = weatherData["timezone"];
           this.currentTemp = weatherData["currently"]["temperature"];
-          this.currentWindSpeed = weatherData["currently"]["windSpeed"];
-          this.currentHumidity = weatherData['currently']['humidity'];
+          this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
+          this.currentHumidity = weatherData['currently']['humidity'] * 100;
           console.log(this.currentTemp);
           console.log(this.cityName);
         });
