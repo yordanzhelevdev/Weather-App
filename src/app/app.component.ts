@@ -1,8 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { GeolocationService } from "./geolocation.service";
 import { WeatherService } from "./weather.service";
 import { kmphToMs } from '../utilities/helpful';
-import { DaysComponent } from './days/days.component';
 
 @Component({
   selector: "app-root",
@@ -16,6 +15,7 @@ export class AppComponent {
   currentTemp: number;
   currentHumidity: number;
   currentWindSpeed: string;
+  weekly: [];
   erroMessage: string;
 
   constructor(
@@ -36,6 +36,7 @@ export class AppComponent {
           this.currentTemp = weatherData["currently"]["temperature"];
           this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
           this.currentHumidity = weatherData['currently']['humidity'] * 100;
+          this.weekly = this.weatherService['daily']['data'];
           console.log(this.currentTemp);
           console.log(this.cityName);
         });
