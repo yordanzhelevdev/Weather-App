@@ -15,8 +15,10 @@ export class AppComponent {
   currentTemp: number;
   currentHumidity: number;
   currentWindSpeed: string;
+  currentTime: number;
   weekly: Array<object>;
   erroMessage: string;
+
 
   constructor(
     private geolocationService: GeolocationService,
@@ -36,8 +38,8 @@ export class AppComponent {
           this.currentTemp = weatherData["currently"]["temperature"];
           this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
           this.currentHumidity = Math.round(weatherData['currently']['humidity'] * 100);
+          this.currentTime = weatherData['currently']['time'];
           this.weekly = weatherData['daily']['data'];
-          console.table(this.weekly);
         });
     });
   }
