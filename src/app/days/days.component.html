@@ -1,7 +1,7 @@
 <ng-container *ngFor="let day of weekly | slice:0:5; let i=index">
   <div class="day" *ngIf="i < 5">
     <div class="day-weather">
-      <img src="../assets/Images/{{day.icon}}" alt="{{day.icon}}" />
+      <img src="../../assets/Images/{{day.icon}}.png" alt="{{day.icon}}" />
       <div>{{day.apparentTemperatureMin}}°/{{day.apparentTemperatureMax}}°</div>
     </div>
     <div class="day-name">
