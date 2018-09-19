@@ -15,7 +15,7 @@ export class AppComponent {
   currentTemp: number;
   currentHumidity: number;
   currentWindSpeed: string;
-  weekly: [];
+  weekly: Array<object>;
   erroMessage: string;
 
   constructor(
@@ -35,8 +35,9 @@ export class AppComponent {
           this.cityName = weatherData["timezone"];
           this.currentTemp = weatherData["currently"]["temperature"];
           this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
-          this.currentHumidity = weatherData['currently']['humidity'] * 100;
+          this.currentHumidity = Math.round(weatherData['currently']['humidity'] * 100);
           this.weekly = weatherData['daily']['data'];
+          console.table(this.weekly);
         });
     });
   }

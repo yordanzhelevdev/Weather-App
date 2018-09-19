@@ -1,45 +1,11 @@
-<div class="day">
-  <div class="day-weather">
-    <img src="../assets/Images/rainy.png" />
-    <div>16°/28°</div>
+<ng-container *ngFor="let day of weekly | slice:0:5; let i=index">
+  <div class="day" *ngIf="i < 5">
+    <div class="day-weather">
+      <img src="../assets/Images/rainy.png" />
+      <div>{{day.apparentTemperatureMin}}°/{{day.apparentTemperatureMax}}°</div>
+    </div>
+    <div class="day-name">
+      <div>{{day.time * 1000 | date: 'EEEE'}}</div>
+    </div>
   </div>
-  <div class="day-name">
-    <div>Today</div>
-  </div>
-</div>
-<div class="day">
-  <div class="day-weather">
-    <img src="../assets/Images/rainy.png" />
-    <div>16°/28°</div>
-  </div>
-  <div class="day-name">
-    <div>Today</div>
-  </div>
-</div>
-<div class="day">
-  <div class="day-weather">
-    <img src="../assets/Images/rainy.png" />
-    <div>16°/28°</div>
-  </div>
-  <div class="day-name">
-    <div>Today</div>
-  </div>
-</div>
-<div class="day">
-  <div class="day-weather">
-    <img src="../assets/Images/rainy.png" />
-    <div>16°/28°</div>
-  </div>
-  <div class="day-name">
-    <div>Today</div>
-  </div>
-</div>
-<div class="day">
-  <div class="day-weather">
-    <img src="../assets/Images/rainy.png" />
-    <div>16°/28°</div>
-  </div>
-  <div class="day-name">
-    <div>Today</div>
-  </div>
-</div>
+</ng-container>

@@ -6,12 +6,10 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./days.component.css"]
 })
 export class DaysComponent implements OnInit {
-  @Input() weekly: [];
-
+  @Input()
+  weekly: Array<object>;
 
   constructor() {}
 
-  ngOnInit() {
-   console.log(this.weekly);
-  }
+  ngOnInit() {}
 }
