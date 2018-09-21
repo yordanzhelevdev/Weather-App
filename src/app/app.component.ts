@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 import { GeolocationService } from "./geolocation.service";
 import { WeatherService } from "./weather.service";
-import { kmphToMs } from '../utilities/helpful';
+import { kmphToMs } from "../utilities/helpful";
+import { checkTime } from "../utilities/helpful";
 
 @Component({
   selector: "app-root",
@@ -20,7 +21,6 @@ export class AppComponent {
   weekly: Array<object>;
   erroMessage: string;
 
-
   constructor(
     private geolocationService: GeolocationService,
     private weatherService: WeatherService
@@ -37,12 +37,25 @@ export class AppComponent {
           console.log(weatherData);
           this.cityName = weatherData["timezone"];
           this.currentTemp = weatherData["currently"]["temperature"];
-          this.currentWindSpeed = kmphToMs(weatherData["currently"]["windSpeed"]);
-          this.currentHumidity = Math.round(weatherData['currently']['humidity'] * 100);
-          this.currentTime = weatherData['currently']['time'];
+          this.currentWindSpeed = kmphToMs(
+            weatherData["currently"]["windSpeed"]
+          );
+          this.currentHumidity = Math.round(
+            weatherData["currently"]["humidity"] * 100
+          );
+          this.currentTime = weatherData["currently"]["time"];
           this.currentIcon = weatherData["currently"]["icon"];
-          this.weekly = weatherData['daily']['data'];
+          this.weekly = weatherData["daily"]["data"];
         });
     });
+    setInterval(this.clock, 1000);
+  }
+
+  clock() {
+    const time = new Date();
+    const h = checkTime(time.getHours());
+    const m = checkTime(time.getMinutes());
+    const s = checkTime(time.getSeconds());
+    return `${h}:${m}:${s}`;
   }
 }
