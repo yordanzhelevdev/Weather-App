@@ -16,7 +16,6 @@ export class AppComponent {
   currentTemp: number;
   currentHumidity: number;
   currentWindSpeed: string;
-  currentTime: number;
   currentIcon: string;
   weekly: Array<object>;
   erroMessage: string;
@@ -43,7 +42,6 @@ export class AppComponent {
           this.currentHumidity = Math.round(
             weatherData["currently"]["humidity"] * 100
           );
-          this.currentTime = weatherData["currently"]["time"];
           this.currentIcon = weatherData["currently"]["icon"];
           this.weekly = weatherData["daily"]["data"];
         });
