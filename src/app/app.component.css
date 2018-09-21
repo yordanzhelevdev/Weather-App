@@ -1,9 +1,9 @@
 .wrapper {
   width: 100%;
-  padding: 60px;
+  padding: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
   align-content: start;
   grid-row-gap: 25px;
 }
@@ -63,7 +63,7 @@
 }
 
 .time {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-right: 35px;
 }
 
@@ -102,10 +102,8 @@
 }
 
 app-days {
-  grid-row: 5;
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-content: center;
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 25px;
+  margin: 0 20px;
 }

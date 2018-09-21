@@ -1,4 +1,4 @@
-<main class="wrapper">
+<section class="wrapper">
   <div class="search-wrapper">
     <i class="fal fa-search search-icon"></i>
     <input type="search" placeholder="Search city" class="search-input" />
@@ -22,8 +22,5 @@
       <span>{{currentWindSpeed}}m/s<span>↑</span></span>
     </div>
   </div>
-  <app-days
-    *ngIf="weekly"
-    [weekly]="weekly"
-  ></app-days>
-</main>
+</section>
+<app-days *ngIf="weekly" [weekly]="weekly"></app-days>
