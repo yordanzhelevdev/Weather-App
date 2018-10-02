@@ -7,7 +7,8 @@
   align-content: start;
   grid-row-gap: 25px;
 }
-.search-wrapper {
+
+/* .search-wrapper {
   display: flex;
   flex: 1 1 600px;
   position: relative;
@@ -17,9 +18,9 @@
   margin: 0 auto;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   grid-column: 2 / span 2;
-}
+} */
 
-.search-icon {
+/* .search-icon {
   padding: 10px;
   background-color: white;
   color: black;
@@ -29,9 +30,10 @@
   border: none;
   flex: 1;
   outline: none;
-}
-.search-input::placeholder {
-  text-transform: uppercase;
+} */
+
+app-search-input {
+  grid-column: 2 / span 2;
 }
 
 .city-name {

@@ -4,6 +4,8 @@ import { WeatherService } from "./weather.service";
 import { kmphToMs } from "../utilities/helpful";
 import { checkTime } from "../utilities/helpful";
 
+
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -46,7 +48,6 @@ export class AppComponent {
           this.weekly = weatherData["daily"]["data"];
         });
     });
-    setInterval(this.clock, 1000);
   }
 
   clock() {

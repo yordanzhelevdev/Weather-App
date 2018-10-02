@@ -1,0 +1,8 @@
+.search-input{
+    color: black
+}
+.search-input::placeholder {
+  text-transform: uppercase;
+}
+
+/* Main input wrapper */
