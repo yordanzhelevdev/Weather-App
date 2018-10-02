@@ -11,8 +11,12 @@ export class SearchInputComponent implements OnInit {
 
   ngOnInit() {
     var placesAutocomplete = places({
-      container: document.querySelector(".search-input")
+      container: document.querySelector(".search-input"),
+      type: 'city'
     });
   }
 
+  onCityChange(e) {
+    console.log(e.suggestion);
+  }
 }
